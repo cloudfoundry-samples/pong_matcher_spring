@@ -10,13 +10,13 @@ import javax.persistence.Table;
 @Table(name = "`match`")
 public final class Match {
     @Id
-    private volatile String id;
+    private String id;
 
     @JsonProperty("match_request_1_id")
-    private volatile String matchRequest1Id;
+    private String matchRequest1Id;
 
     @JsonProperty("match_request_2_id")
-    private volatile String matchRequest2Id;
+    private String matchRequest2Id;
 
     Match() {
     }

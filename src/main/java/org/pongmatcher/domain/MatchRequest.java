@@ -9,11 +9,11 @@ public final class MatchRequest {
 
     @GeneratedValue
     @Id
-    private volatile Long id;
+    private Long id;
 
-    private volatile String uuid;
+    private String uuid;
 
-    private volatile String requesterId;
+    private String requesterId;
 
     MatchRequest() {
     }

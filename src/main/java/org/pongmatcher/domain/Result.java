@@ -10,36 +10,37 @@ import java.util.UUID;
 public final class Result {
 
     @Id
-    private volatile String id = UUID.randomUUID().toString();
+    private  String id = UUID.randomUUID().toString();
 
-    private volatile String winnerId;
+    @JsonProperty("winner")
+    private  String winnerId;
 
-    private volatile String loserId;
+    @JsonProperty("loser")
+    private  String loserId;
 
-    private volatile String matchId;
+    @JsonProperty("match_id")
+    private  String matchId;
 
     Result() {
     }
 
-    public Result(@JsonProperty("winner") String winnerId,
-                  @JsonProperty("loser") String loserId,
-                  @JsonProperty("match_id") String matchId) {
+    public Result(String winnerId,
+                  String loserId,
+                  String matchId) {
         this.winnerId = winnerId;
         this.loserId = loserId;
         this.matchId = matchId;
     }
 
-    @JsonProperty("winner")
+
     public String getWinnerId() {
         return winnerId;
     }
 
-    @JsonProperty("loser")
     public String getLoserId() {
         return loserId;
     }
 
-    @JsonProperty("match_id")
     public String getMatchId() {
         return matchId;
     }
