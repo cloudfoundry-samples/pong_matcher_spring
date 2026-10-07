@@ -2,13 +2,13 @@ package org.pongmatcher.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "`match`")
-public final class Match {
+@Table(name = "pong_match")
+public class Match {
     @Id
     private volatile String id;
 

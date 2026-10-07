@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-final class EveryResourceController {
+class EveryResourceController {
 
     private final MatchRequestRepository matchRequestRepository;
 

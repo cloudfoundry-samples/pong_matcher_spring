@@ -17,7 +17,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @RestController
-final class MatchRequestController {
+class MatchRequestController {
 
     private final OpenMatchFinder openMatchFinder;
 

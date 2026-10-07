@@ -1,10 +1,8 @@
 ---
+# Without a bound database service, Spring Boot uses an in-memory H2 database.
+# On Cloud Foundry, java-cfenv (added by the Java buildpack for Spring Boot 3 and 4 apps)
+# sets spring.datasource.* from a bound MySQL or PostgreSQL service.
 spring:
-  datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost/pong_matcher_spring_development
-    username: springpong
-    password: springpong
   jpa:
-    hibernate.ddl-auto: none
-    show_sql: false
+    hibernate.ddl-auto: update
+    open-in-view: false

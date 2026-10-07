@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-final class ResultsController {
+class ResultsController {
 
     private final ResultRepository resultRepository;
 

@@ -1,8 +1,7 @@
 ---
 applications:
   - name: springpong
-    buildpacks: 
+    memory: 1G
+    buildpacks:
       - java_buildpack
-    path: target/pong-matcher-spring-1.0.0.BUILD-SNAPSHOT.jar
-    services:
-      - mysql
+    path: target/pong-matcher-spring-1.0.0.jar

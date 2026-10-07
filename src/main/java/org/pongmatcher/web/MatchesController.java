@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-final class MatchesController {
+class MatchesController {
 
     private final MatchRepository matchRepository;
 
@@ -22,7 +22,7 @@ final class MatchesController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/matches/{id}")
     ResponseEntity<Match> show(@PathVariable String id) {
-        Match match = matchRepository.findOne(id);
+        Match match = matchRepository.findById(id).orElse(null);
 
         if (match == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
